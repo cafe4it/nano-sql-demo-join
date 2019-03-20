@@ -74,7 +74,7 @@ nSQL().config({
         if (rows.length <= 0) {
             for (let i = 0; i <= 50; i++) {
                 const report = generateReport();
-                nSQL('Reports').query('upsert', report).exec()
+                nSQL('Reports').query('upsert', report).exec().then(rows => console.log(rows))
             }
         }
     })
@@ -95,14 +95,14 @@ nSQL().config({
         }
     })
 
-    const port = 3001;
+    const port = 3000;
     app.listen(port, function () {
         console.log('App listening on port:' + port);
 
         //simulator users download albums
-        setInterval(function () {
-            const report = generateReport();
-            nSQL('Reports').query('upsert', report).exec().then(() => console.log('User downloading...album ' + report.albumId))
-        }, _.random(500, 5000))
+        // setInterval(function () {
+        //     const report = generateReport();
+        //     nSQL('Reports').query('upsert', report).exec().then(() => console.log('User downloading...album ' + report.albumId))
+        // }, _.random(500, 5000))
     })
 })
