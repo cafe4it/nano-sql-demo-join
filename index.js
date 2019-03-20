@@ -100,9 +100,9 @@ nSQL().config({
         console.log('App listening on port:' + port);
 
         //simulator users download albums
-        // setInterval(function () {
-        //     const report = generateReport();
-        //     nSQL('Reports').query('upsert', report).exec().then(() => console.log('User downloading...album ' + report.albumId))
-        // }, _.random(500, 5000))
+        setInterval(function () {
+            const report = generateReport();
+            nSQL('Reports').query('upsert', report).exec().then(() => console.log('User downloading...album ' + report.albumId))
+        }, _.random(500, 5000))
     })
 })
