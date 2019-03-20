@@ -1,0 +1,35 @@
+{
+  "name": "nano-sql-demo-join",
+  "version": "1.0.0",
+  "description": "nano-sql join very slow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cafe4it/nano-sql-demo-join.git"
+  },
+  "keywords": [
+    "nano-sql",
+    "indexdb"
+  ],
+  "author": "cafe4it@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cafe4it/nano-sql-demo-join/issues"
+  },
+  "homepage": "https://github.com/cafe4it/nano-sql-demo-join#readme",
+  "dependencies": {
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11",
+    "nano-sql": "^1.8.3",
+    "node-fetch": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}

@@ -1,0 +1,4 @@
+package-lock.json
+.idea
+db_myDB
+node_modules
